@@ -5,12 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css" />
 <title>Display Chores</title>
 </head>
 <body>
     <h1>Todo List</h1>
     <form action="Add" method="POST">
-    <table border="2" cellspacing="5" cellpadding="5" bgcolor="#9CD7F0" width="2000">
+    <table>
         <c:forEach items="${entries}" var="entry">
         <tr>
             <c:if test="${entry.check == 'True'}">

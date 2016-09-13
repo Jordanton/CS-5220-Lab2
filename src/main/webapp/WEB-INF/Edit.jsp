@@ -16,7 +16,7 @@
             <c:if test="${entry.check == 'True'}">
                 <td>${entry.chore}</td>
                 <td>${entry.date}</td>           
-                <td><a href="Edit?id=${entry.id}">X</a></td>
+                <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
             </c:if>                  
         </tr>
         </c:forEach>

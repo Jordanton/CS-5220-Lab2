@@ -13,7 +13,7 @@
     <form action="Add" method="POST">
     <table>
         <tr>
-    	      <th>Item</th><th>Date</th><th>Completed</th><th>Done</th>
+    	      <th>Item</th><th>Date</th><th>Completed</th><th>Date Completed</th>
         </tr>
         <c:forEach items="${entries}" var="entry">
         <tr>
@@ -21,6 +21,7 @@
                 <td>${entry.chore}</td>
                 <td>${entry.date}</td>
                 <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
+                <td>${entry.compDate}</td>
             </c:if>
         </tr>
         </c:forEach>
@@ -29,8 +30,8 @@
             <c:if test="${finishChore.check == 'False'}">
                 <td><strike>${finishChore.chore}</strike></td>
                 <td><strike>${finishChore.date}</strike></td>
+                <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
                 <td align="center">${finishChore.compDate}</td>
-                <td></td>
             </c:if>
         </tr>
         </c:forEach>
@@ -38,7 +39,7 @@
             <td>
                 <input type="text" name="item" />
             </td>
-            <td colspan="2" rowspan="1" style="text-align: center;">
+            <td colspan="3" rowspan="1" style="text-align: center;">
                 <input type="submit" name="add" value="Add" />
             </td>
         </tr>

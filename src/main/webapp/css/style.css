@@ -2,13 +2,13 @@ table {
 	border-collapse: collapse;
 }
 
-table, td {
-    width: 80%;
+table, th, td {
+    width: 90%;
     border: 5px solid black;    
     background-color: #AFEEEE;
 }
 
-td {
+th, td {
 	height: 50px;
 	vertical-align: bottom;
 	padding: 18px;

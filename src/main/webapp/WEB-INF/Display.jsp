@@ -22,7 +22,6 @@
                 <td>${entry.date}</td>
                 <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
                 <td>${entry.compDate}</td>
-            </c:if>
         </tr>
         </c:forEach>
         <c:forEach items="${finishChores}" var="finishChore">

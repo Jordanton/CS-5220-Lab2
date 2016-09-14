@@ -37,7 +37,7 @@ public class Add extends HttpServlet {
 		// Get today's date and format it
 		Date today = new Date();
 		
-		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat( "MM-dd-yyyy" );
+		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat( "MM/dd/yyyy" );
 		
 		String day = DATE_FORMAT.format( today );
 		

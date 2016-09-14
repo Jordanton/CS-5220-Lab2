@@ -12,32 +12,36 @@
     <h1>Todo List</h1>
     <form action="Edit" method="POST">
     <table>
+    	<tr>
+    		<th>Item</th><th>Date</th><th>Completed</th><th>Done</th>
+   		</tr>
         <c:forEach items="${entries}" var="entry">
         <tr>
             <c:if test="${entry.check == 'True'}">
                 <td>${entry.chore}</td>
-                <td>${entry.date}</td>           
+                <td>${entry.date}</td>
                 <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
-            </c:if>                  
+            </c:if>
         </tr>
         </c:forEach>
-        <c:forEach items="${finishChores}" var="finishChore"> 
+        <c:forEach items="${finishChores}" var="finishChore">
         <tr>
             <c:if test="${finishChore.check == 'False'}">
                 <td><strike>${finishChore.chore}</strike></td>
                 <td><strike>${finishChore.date}</strike></td>
-                <td></td>                 
-            </c:if>       
+                <td align="center">${finishChore.compDatei}</td>
+                <td></td>
+            </c:if>
         </tr>
         </c:forEach>
         <tr>
             <td>
-                <input type="text" name="item" />    
+                <input type="text" name="item" />
             </td>
             <td colspan="2" rowspan="1" style="text-align: center;">
                 <input type="submit" name="add" value="Add" />
-            </td>       
-        </tr>                
+            </td>
+        </tr>
     </table>
     </form>
 </body>

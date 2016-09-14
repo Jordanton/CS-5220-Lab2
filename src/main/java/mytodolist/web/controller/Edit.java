@@ -52,13 +52,15 @@ public class Edit extends HttpServlet {
 				
 		// Set boolean value to false
 		updatedEntry.setCheck( false );
+		
 		// Get today's date and format it
 		Date today = new Date();
 				
 		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat( "MM/dd/yyyy" );
 				
 		String day = DATE_FORMAT.format( today );
-		updatedEntry.setCompDate(day);
+		
+		updatedEntry.setCompDate( day );
 			
 		finishChores.add( updatedEntry );
 		

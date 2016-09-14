@@ -57,10 +57,8 @@ public class MyToDoList {
 		return compDate;
 	}
 
-	public void setCompDate(String compDate) {
+	public void setCompDate( String compDate ) {
 		this.compDate = compDate;
 	}
-	
-	
 	
 }

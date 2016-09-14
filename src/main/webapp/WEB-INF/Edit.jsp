@@ -29,7 +29,7 @@
             <c:if test="${finishChore.check == 'False'}">
                 <td><strike>${finishChore.chore}</strike></td>
                 <td><strike>${finishChore.date}</strike></td>
-                <td align="center">${finishChore.compDate}</td>
+                <td align="center">${finishChore.compDatei}</td>
                 <td></td>
             </c:if>
         </tr>

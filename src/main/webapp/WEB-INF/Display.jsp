@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css" />
 <title>Display Chores</title>
 </head>
 <body>
@@ -18,9 +19,9 @@
         <tr>
             <c:if test="${entry.check == 'True'}">
                 <td>${entry.chore}</td>
-                <td>${entry.date}</td>
-                <td align="center">${entry.compDate }</td>           
-                <td><a href="Edit?id=${entry.id}">X</a></td>
+                <td>${entry.date}</td>  
+                <td align="center">${entry.compDate }</td>          
+                <td><a href="Edit?id=${entry.id}"><img src="<c:url value='/resources/delete.png'/>" alt="" /></a></td>
             </c:if>                  
         </tr>
         </c:forEach>

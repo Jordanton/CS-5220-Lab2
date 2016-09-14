@@ -5,6 +5,7 @@ public class MyToDoList {
 	private Integer id;
 	private String chore;
 	private String date;
+	private String compDate;
 	private boolean check;
 	
 	public MyToDoList() {
@@ -17,6 +18,7 @@ public class MyToDoList {
 		this.chore = chore;
 		this.date = date;
 		check = true;
+		compDate = "-";
 	}
 
 	public Integer getId() {
@@ -50,5 +52,15 @@ public class MyToDoList {
 	public void setCheck( boolean check ) {
 		this.check = check;
 	}
+
+	public String getCompDate() {
+		return compDate;
+	}
+
+	public void setCompDate(String compDate) {
+		this.compDate = compDate;
+	}
+	
+	
 	
 }
